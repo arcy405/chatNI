@@ -69,4 +69,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
-gem 'pg'
+group :development, :test do
+  gem 'sqlite3'
+end
+gem 'pg', group: :production
