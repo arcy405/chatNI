@@ -5,6 +5,7 @@ class RoomChannel < ApplicationCable::Channel
   
       # or
       # stream_from "room_#{params[:room]}"
+      RoomChannel.perform_later("This is a background job")
     end
   end
   
